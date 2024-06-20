@@ -1,3 +1,5 @@
+/* main landing screen */
+
 *{
     padding: 0;
     margin: 0;
@@ -268,5 +270,111 @@ section{
     .startingImg img{
         width: 100%;
         height: auto;
+    }
+}
+
+/* Next section */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700;900&display=swap');
+
+.glowText{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    /* align-items: center; */
+    padding-top: 100px;
+    min-height: 100vh;
+    background: #262626;
+    background-image: linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px);
+    background-size: 4vh 4vh;
+}
+
+.numBg{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    background: #0e0e0e;
+}
+
+.numbers{
+    position: relative;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.numbers span{
+    position: relative;
+    font-size: 3em;
+    font-weight: 900;
+    color: rgba(255,255,255, 0.05);
+    line-height: 0.9em;
+    transition: 1s;
+    user-select: none;
+}
+
+.numbers span:hover{
+    transition: 0s;
+    color: #fff;
+    text-shadow: 0 0 10px #0f0,
+    0 0 20px #0f0,
+    0 0 40px #0f0,
+    0 0 80px #0f0,
+    0 0 160px #0f0;
+    z-index: 1000000000;
+}
+
+.glowText h2{
+    color: #fff;
+    font-size: 5em;
+    font-weight: 600;
+    padding: 0 100px;
+}
+
+.glowText h2 span{
+    position: relative;
+    color: rgba(255,255,255, 0.1);
+    animation: displayText 9s infinite;
+    animation-delay: calc(-3s * var(--i));
+}
+
+@keyframes displayText{
+    0%{
+        display: inline-block;
+    }
+    33.33%, 100%{
+        display: none;
+    }
+}
+
+.glowText h2 span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #01fe87;
+    overflow: hidden;
+    border-right: 4px solid #01fe87;
+    filter: drop-shadow(0 0 5px #01fe87) drop-shadow(0 0 25px #01fe87);
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
     }
 }

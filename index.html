@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"rel="stylesheet">
     
 </head>
 
@@ -56,7 +57,7 @@
     </div>
 
     <div class = "scroll-down">
-        <i class = "ri-arrow-down-s-fill"></i>
+        <i class = "ri-arrow-down-s-fill">Scroll down</i>
     </div>
 
     <!-- next section -->
@@ -75,17 +76,29 @@
         <a href="#"><span>Explore more?</span></a>
     </div>
 
+    <footer>
+        <div class = "waves">
+            <div class = "wave" id = "wave1"></div>
+            <div class = "wave" id = "wave2"></div>
+            <div class = "wave" id = "wave3"></div>
+            <div class = "wave" id = "wave4"></div>
+        </div>
+        <ul class = "socials">
+            <li><a href="#"><ion-icon name="logo-discord"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="mail-unread-outline"></ion-icon></a></li>
+        </ul>
+        <ul class = 'menu'>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </footer>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        let numbers = document.querySelector('.numbers');
-        let numString = numbers.textContent;
-        let splitNum = numString.split("");
-        numbers.textContent = "";
-        for (let i=0; i<splitNum.length; i++){
-            numbers.innerHTML += '<span>' + splitNum[i]+'</span>'
-        }
-    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>

@@ -18,3 +18,12 @@ sr.reveal('.main-text', {delay:200, origin:'top'});
 sr.reveal('.startingImg', {delay:450, origin:'top'});
 sr.reveal('.icons', {delay:500, origin:'left'});
 sr.reveal('.scroll-down', {delay:500, origin:'right'});
+
+AOS.init();
+let numbers = document.querySelector('.numbers');
+let numString = numbers.textContent;
+let splitNum = numString.split("");
+numbers.textContent = "";
+for (let i = 0; i < splitNum.length; i++) {
+  numbers.innerHTML += '<span>' + splitNum[i] + '</span>'
+}

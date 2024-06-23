@@ -152,7 +152,7 @@ body {
 
 .cards .box{
     position: relative;
-    width: 300px;
+    width: 400px;
     height: 400px;
     margin: 40px;
     background: #232323;
@@ -166,17 +166,6 @@ body {
     top: 20px;
     left: 20px;
     font-size: 6em;
-    color: #fff;
-    font-style: italic;
-    opacity: 0;
-    transition: 0.5s;
-}
-.cards .box::after{
-    content: 'CODE';
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 5em;
     color: #fff;
     font-style: italic;
     opacity: 0;
@@ -228,21 +217,6 @@ body {
     opacity: 1;
 }
 
-.cards .box .circle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    transition: 0.5s;
-    background: #fff;
-    transform-style: preserve-3d;
-    z-index: 10;
-    opacity: 1;
-    transform: translate3d(-50%, -50%, 50px);
-}
-
 .cards .box .img{
     position: absolute;
     top: 50%;
@@ -255,11 +229,13 @@ body {
     transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
 }
 
-.cards .box:nth-child(1) .circle,
+.cards .box:hover .img{
+    transform: translate3d(-50%, -50%, 100px);
+}
+
 .cards .box:nth-child(1) .learn{
     background: #379bf7;
 }
-.cards .box:nth-child(2) .circle,
 .cards .box:nth-child(2) .learn{
     background: #0bdc28;
 }

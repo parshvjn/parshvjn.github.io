@@ -38,19 +38,26 @@
                 <div class = "box">
                     <h2 class = "name">Python</h2>
                     <a href="#" class = "learn">Learn</a>
-                    <div class = "circle"></div>
-                    <img src="images/python.jpg" class = 'img' alt="python img">
+                    <img src="images/python.png" class = 'img' alt="python img">
                 </div>
                 <div class = "box">
                     <h2 class = "name">Python</h2>
                     <a href="#" class = "learn">Learn</a>
-                    <div class = "circle"></div>
-                    <img src="images/python.jpg" class = 'img' alt="python img">
+                    <img src="images/python.png" class = 'img' alt="python img">
                 </div>
             </div>
         </section>
             
 
         <script src="learn.js" async defer></script>
+        <script src = "vanilla-tilt.min.js"></script>
+        <script>
+        	VanillaTilt.init(document.querySelectorAll(".box"), {
+                    max: 30,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.3
+                });
+        </script>
     </body>
 </html>
